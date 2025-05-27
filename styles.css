@@ -1,0 +1,51 @@
+:root {
+    --hfBlue: rgba(7,109,181,255);
+    --darkhfBlue: #032c48;
+}
+
+body {
+    background-color: white;
+}
+
+.logo {
+    display: block;
+    margin: auto;
+    width: 10vw;
+}
+
+.logoSection {
+    background-color: white;
+    margin-bottom: 5px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    overflow: hidden;
+    background-color: var(--hfBlue);
+    position: sticky;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  li a:hover {
+    background-color: var(--darkhfBlue);
+  }
+
+  footer {
+    background-color: var(--hfBlue);
+    width: 100vw;
+    color: white;
+  }
