@@ -18,6 +18,12 @@ body {
   font-style: normal;
 }
 
+.dm-serif-text-regular {
+  font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .logo {
     display: block;
     margin: auto;
@@ -29,7 +35,7 @@ body {
     margin-bottom: 5px;
 }
 
-ul {
+.nav-list {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -39,11 +45,11 @@ ul {
     position: sticky;
 }
   
-li {
+.nav-item {
     float: left;
 }
   
-li a {
+.nav-item a {
     display: block;
     color: white;
     text-align: center;
@@ -51,7 +57,7 @@ li a {
     text-decoration: none;
   }
 
-li a:hover {
+.nav-item a:hover {
     background-color: var(--darkhfBlue);
 }
 
@@ -70,10 +76,108 @@ footer {
 
 .imgtextleft {
   position: absolute;
-  top: 30%;
+  top: 35%;
   left: 10%;
   transform: translate(-20%, -50%);
   font-size: 40px;
   font-family: "Satisfy", cursive;
   color: var(--darkhfBlue);
+}
+
+.slogan {
+  font-family: "DM Serif Text", serif;
+  font-size: 18px;
+  margin: 0 auto;
+}
+
+.trtmnts {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.trt-wrapper {
+  position: relative;
+  width: 40%;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* light subtle shadow */
+}
+
+.trt-wrapper a {
+  text-decoration: none;
+  color: white;
+}
+
+.trt-wrapper a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+.trtmnts img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.overlay-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(10, 77, 122, 1); /* semi-transparent black */
+  color: white;
+  text-align: center;
+  font-size: 1.5em;
+  font-family: "DM Serif Text", serif;
+}
+
+h2 {
+  font-family: "DM Serif Text", serif;
+  font-size: 28px;
+  color: var(--darkhfBlue);
+  padding-left: 20px;
+}
+
+.ipl-box {
+  display: flex;
+  align-items: center;
+  max-width: 90%;       /* Slightly less than full width */
+  margin: 40px auto;    /* Center it horizontally */
+  padding: 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.ipl-box img {
+  max-width: 750px;         /* Fixed width image */
+  height: auto;
+  margin-right: 20px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.ipl-text {
+  flex: 1;              /* Take up remaining space */
+  font-family: "DM Serif Text", serif;
+  color: #444444;
+  font-size: 14px;
+  text-align: justify;
+}
+
+.ipl-text li {
+  margin-bottom: 10px;
+}
+
+.ipl-item {
+  text-decoration: none;
+  font-family: "Satisfy", cursive;
+  color: var(--darkhfBlue);
+  font-size: 24px;
+  font-weight: 800;
 }

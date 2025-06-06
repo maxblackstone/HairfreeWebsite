@@ -1,8 +1,3 @@
-:root {
-    --hfBlue: rgba(7,109,181,255);
-    --darkhfBlue: #032c48;
-}
-
 body {
     background-color: white;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -11,6 +6,31 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
+}
+:root {
+    --hfBlue: rgba(7,109,181,255);
+    --darkhfBlue: #0a4d7a;
+}
+
+body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.satisfy-regular {
+  font-family: "Satisfy", cursive;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.dm-serif-text-regular {
+  font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .logo {
@@ -24,22 +44,21 @@ body {
     margin-bottom: 5px;
 }
 
-ul {
+.nav-list {
     list-style-type: none;
     margin: 0;
     padding: 0;
     width: 100vw;
     overflow: hidden;
-    background-color: var(--darkhfBlue);
+    background-color: var(--hfBlue);
     position: sticky;
-    margin-bottom: 20px;
 }
   
-li {
+.nav-item {
     float: left;
 }
   
-li a {
+.nav-item a {
     display: block;
     color: white;
     text-align: center;
@@ -47,7 +66,7 @@ li a {
     text-decoration: none;
   }
 
-li a:hover {
+.nav-item a:hover {
     background-color: var(--darkhfBlue);
 }
 
