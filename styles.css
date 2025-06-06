@@ -1,10 +1,21 @@
 :root {
     --hfBlue: rgba(7,109,181,255);
-    --darkhfBlue: #032c48;
+    --darkhfBlue: #0a4d7a;
 }
 
 body {
     background-color: white;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.satisfy-regular {
+  font-family: "Satisfy", cursive;
+  font-weight: 200;
+  font-style: normal;
 }
 
 .logo {
@@ -26,13 +37,13 @@ ul {
     overflow: hidden;
     background-color: var(--hfBlue);
     position: sticky;
-  }
+}
   
-  li {
+li {
     float: left;
-  }
+}
   
-  li a {
+li a {
     display: block;
     color: white;
     text-align: center;
@@ -40,12 +51,29 @@ ul {
     text-decoration: none;
   }
 
-  li a:hover {
+li a:hover {
     background-color: var(--darkhfBlue);
-  }
+}
 
-  footer {
+footer {
     background-color: var(--hfBlue);
     width: 100vw;
     color: white;
-  }
+    padding: 1px;
+    margin-top: auto; /* Ensures the footer sticks to the bottom */
+}
+
+.main-image img {
+    width: 100vw;
+    padding-top: 0;
+}
+
+.imgtextleft {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  transform: translate(-20%, -50%);
+  font-size: 40px;
+  font-family: "Satisfy", cursive;
+  color: var(--darkhfBlue);
+}
