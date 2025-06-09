@@ -12,6 +12,8 @@ body {
     flex-direction: column;
 }
 
+/* Fonts */
+
 .satisfy-regular {
   font-family: "Satisfy", cursive;
   font-weight: 200;
@@ -23,6 +25,17 @@ body {
   font-weight: 400;
   font-style: normal;
 }
+
+/* Subheading style */
+
+h2 {
+  font-family: "DM Serif Text", serif;
+  font-size: 28px;
+  color: var(--darkhfBlue);
+  padding-left: 20px;
+}
+
+/* Logo and Navbar */
 
 .logo {
     display: block;
@@ -61,6 +74,8 @@ body {
     background-color: var(--darkhfBlue);
 }
 
+/* Footer */
+
 footer {
     background-color: var(--hfBlue);
     width: 100vw;
@@ -68,6 +83,8 @@ footer {
     padding: 1px;
     margin-top: auto; /* Ensures the footer sticks to the bottom */
 }
+
+/* Index head */
 
 .main-image img {
     width: 100vw;
@@ -89,6 +106,8 @@ footer {
   font-size: 18px;
   margin: 0 auto;
 }
+
+/* Skin Treatments */
 
 .trtmnts {
   display: flex;
@@ -135,12 +154,7 @@ footer {
   font-family: "DM Serif Text", serif;
 }
 
-h2 {
-  font-family: "DM Serif Text", serif;
-  font-size: 28px;
-  color: var(--darkhfBlue);
-  padding-left: 20px;
-}
+/* IPL Hair Removal Section */
 
 .ipl-box {
   display: flex;
@@ -180,4 +194,72 @@ h2 {
   color: var(--darkhfBlue);
   font-size: 24px;
   font-weight: 800;
+}
+
+/* Contact Details */
+
+.info-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  gap: 40px;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.left-side,
+.right-side {
+  flex: 1 1 500px;
+  min-width: 300px;
+  box-sizing: border-box;
+}
+
+.left-side h2,
+.right-side h2 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+.businessAdrs a {
+  text-decoration: none;
+  color: var(--darkhfBlue);
+  font-size: 14px;
+  font-family: "DM Serif Text", serif;
+  display: block;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.businessAdrs iframe {
+  width: 100%;
+  height: 300px;
+  border: 0;
+  display: block;
+}
+
+.businessHrs table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1em;
+  font-family: "DM Serif Text", serif;
+}
+
+.businessHrs th,
+.businessHrs td {
+  text-align: left;
+  padding: 8px;
+}
+
+.businessHrs th {
+  width: 50%;
+  font-weight: 600;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .info-container {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
