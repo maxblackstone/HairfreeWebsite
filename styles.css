@@ -26,6 +26,9 @@ body {
   font-style: normal;
 }
 
+/* Heading style */
+
+
 /* Subheading style */
 
 h2 {
@@ -33,6 +36,19 @@ h2 {
   font-size: 28px;
   color: var(--darkhfBlue);
   padding-left: 20px;
+}
+
+.servheading {
+  font-family: "DM Serif Text", serif;
+  font-size: 40px;
+  color: var(--darkhfBlue);
+  padding-left: 20px;
+}
+
+.servsub {
+  font-family: "Satisfy", cursive;
+  font-size: 24px;
+  color: var(--darkhfBlue);
 }
 
 /* Logo and Navbar */
@@ -48,30 +64,73 @@ h2 {
     margin-bottom: 5px;
 }
 
-.nav-list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    overflow: hidden;
-    background-color: var(--hfBlue);
-    position: sticky;
+/* Nav Bar */
+
+.navBar {
+  position: relative;
+  z-index: 10;
+  font-family: "DM Serif Text", serif;
 }
-  
+
+/* Dropdown container */
 .nav-item {
-    float: left;
+  float: left;
+  position: relative;
 }
-  
+
+/* Nav bar appearance */
+.nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  background-color: var(--hfBlue);
+  position: sticky;
+  display: flex; /* ← ensures float is unnecessary */
+}
+
 .nav-item a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
 
 .nav-item a:hover {
-    background-color: var(--darkhfBlue);
+  background-color: var(--darkhfBlue);
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--hfBlue);
+  z-index: 9999;
+  min-width: 160px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  list-style-type: none; /* ✅ Removes bullet points */
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-menu li a {
+  display: block;
+  text-align: left;
+  padding: 12px 16px;
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+  background-color: var(--darkhfBlue);
+}
+
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
 }
 
 /* Footer */
@@ -93,6 +152,7 @@ footer {
 
 .imgtextleft {
   position: absolute;
+  z-index: 1;
   top: 35%;
   left: 10%;
   transform: translate(-20%, -50%);
@@ -262,4 +322,77 @@ footer {
     flex-direction: column;
     gap: 20px;
   }
+}
+
+
+/* IPL Services */
+.iplserv-text-container {
+  display: flex;
+  max-width: 90vw;     /* Slightly less than full screen */
+  margin: 2rem auto;   /* Center horizontally with spacing */
+  gap: 2rem;           /* Space between image and text */
+  align-items: center; /* Vertically align content */
+  font-family: "DM Serif Text", serif;
+  font-size: 14px;
+  color: #444444;
+}
+
+.ipl-left-image {
+  max-width: 700px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.ipl-right-text {
+  flex: 1; /* Take up remaining space */
+}
+
+.ipl-right-text h2 {
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .iplserv-text-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .ipl-left-image {
+    width: 100%;
+    max-width: 90vw;
+  }
+}
+
+.ipl-table {
+  width: 100%;
+  border-collapse: collapse; /* Removes spacing between cells */
+  text-align: center;
+  table-layout: fixed;       /* Evenly spaces columns */
+  margin: 2rem 0;
+}
+
+.ipl-th {
+  padding: 1rem;             /* Adds spacing inside each cell */
+  font-weight: normal;
+  border: none;              /* Removes any default borders */
+  font-family: "DM Serif Text", serif;
+  font-size: 14px;
+  color: var(--darkhfBlue);
+}
+
+.ipl-th-emph {
+  padding: 1rem;             /* Adds spacing inside each cell */
+  font-weight: normal;
+  border: none;              /* Removes any default borders */
+  font-family: "Satisfy", cursive;
+  font-size: 48px;
+  color: var(--hfBlue);
+}
+
+hr {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  border: none;
+  border-top: 2px solid #444444; /* Optional: custom thickness and color */
 }
